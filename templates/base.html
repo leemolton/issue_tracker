@@ -8,9 +8,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-    
     <body>
-       <!-- Navigation -->
+       <!-- Fixed masthead -->
     <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -23,12 +22,12 @@
               </button>
               <a class="navbar-brand" href="{% url 'get_posts' % }"><img
               src="/media/img/logo.png"></img></a>
+            </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
                   <li><a href="{% url 'new_post' %}">New Post</a></li>
                 </ul>
                 </div>
-              </div>
         </div>
     </nav>
     

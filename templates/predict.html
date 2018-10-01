@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Predictions Competition</h1>
-
+<h2>Predictions Competition</h2>
 <body>
     <div class="container">
-        <p>Do you know football, if so come and have a go at our new Predictions Competition. It is only £1 to enter and there are big prizes to be won.</p>
-        <h1>Premier League Fixtures</h1>
-        <h4>Saturday 15 September</h4>
+        <div id="box" class="box_title2">
+        <h5>Come and have a go at our new Predictions Competition.</h5>
+        <h6>It is only £1 to enter with big prizes to be won.</h6>
+        <h3>Premier League Fixtures</h3>
+        <h4>Saturday 20 October</h4>
         <form>
             <fieldset>
-                <li><label>Tottenham</label>
+                <ul><label>Chelsea</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -35,8 +36,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Liverpool 12:30</label></li>
-                <li><label>Bournemouth</label>
+                <label>Man United 12:30</label><ul>
+                <ul><label>Bournemouth</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -62,8 +63,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Leicester 15:00</label></li>
-                <li><label>Chelsea</label>
+                <label>Southampton 15:00</label><ul>
+                <ul><label>Cardiff</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -89,8 +90,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Cardiff 15:00</label></li>
-                <li><label>Huddersfield</label>
+                <label>Fulham 15:00</label></ul>
+                <ul><label>Man City</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -116,8 +117,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>C Palace 15:00</label></li>
-                <li><label>Man City</label>
+                <label>Burnley 15:00</label></ul>
+                <ul><label>Newcastle</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -143,8 +144,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Fulham 15:00</label></li>
-                <li><label>Newcastle</label>
+                <label>Brighton 15:00</label></ul>
+                <ul><label>West Ham</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -170,8 +171,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Arsenal 15:00</label></li>
-                <li><label>Watford</label>
+                <label>Tottenham 15:00</label></ul>
+                <ul><label>Wolves</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -197,7 +198,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Man United 17:30</label></li>
+                <label>Watford 15:00</label></ul>
+                <ul><label>Huddersfield</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -210,8 +212,22 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <h4>Sunday 16 September</h4>
-                <li><label>Wolves</label>
+                <label>v</label>
+                <select id = "myList">
+                    <option value = "0">0</option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                </select>
+                <label>Liverpool 17:30</label></ul>
+                <h4>Sunday 20 October</h4>
+                <ul><label>Everton</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -237,8 +253,9 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                     </select>
-                    <label>Burnley 13:30</li>
-                <li><label>Everton</label>
+                    <label>C Palace 16:00</ul>
+                    <h4>Monday 21 October</h4>
+                <ul><label>Arsenal</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -264,35 +281,9 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                     </select>
-                <label>West Ham 16:00</li>
-                <h4>Monday 17 September</h4>
-                <li><label>Southampton</label>
-                <select id = "myList">
-                    <option value = "0">0</option>
-                    <option value = "1">1</option>
-                    <option value = "2">2</option>
-                    <option value = "3">3</option>
-                    <option value = "4">4</option>
-                    <option value = "5">5</option>
-                    <option value = "6">6</option>
-                    <option value = "7">7</option>
-                    <option value = "8">8</option>
-                    <option value = "9">9</option>
-                    </select>
-                    <label>v</label>
-                <select id = "myList">
-                    <option value = "0">0</option>
-                    <option value = "1">1</option>
-                    <option value = "2">2</option>
-                    <option value = "3">3</option>
-                    <option value = "4">4</option>
-                    <option value = "5">5</option>
-                    <option value = "6">6</option>
-                    <option value = "7">7</option>
-                    <option value = "8">8</option>
-                    <option value = "9">9</option>
-                    </select>
-                    <label>Brighton 20:00</li></li>
+                <label>Leicester 20:00</ul>
+                </ul>
+                <a class="btn btn-primary btn-sm" href="buy.html">Submit</a></p>
             </div>
         </fieldset>
     </form>

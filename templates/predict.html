@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2>Predictions Competition</h2>
 <body>
     <div class="container">
-        <div id="box" class="box_title2">
-        <h5>Come and have a go at our new Predictions Competition.</h5>
-        <h6>It is only £1 to enter with big prizes to be won.</h6>
-        <h3>Premier League Fixtures</h3>
-        <h4>Saturday 20 October</h4>
-        <form>
-            <fieldset>
-                <ul><label>Chelsea</label>
+        <div class="row1">
+        <h1>Predictions Competition</h1>
+            <div id="box" class="box_title2">
+                <h6>Come and have a go at our new Predictions Competition.
+                <h6>It is only £1 to enter with big prizes to be won.</h6>
+                <h3>Premier League Fixtures</h3>
+                <h5>Saturday 20 October</h5>
+                <form>
+                <fieldset>
+                <li><label>Chelsea</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -36,8 +37,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Man United 12:30</label><ul>
-                <ul><label>Bournemouth</label>
+                <label>Man United 12:30</label>
+                <li><label>Bournemouth</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -63,8 +64,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Southampton 15:00</label><ul>
-                <ul><label>Cardiff</label>
+                <label>Southampton 15:00</label>
+                <li><label>Cardiff</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -90,8 +91,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Fulham 15:00</label></ul>
-                <ul><label>Man City</label>
+                <label>Fulham 15:00</label>
+                <li><label>Man City</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -117,8 +118,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Burnley 15:00</label></ul>
-                <ul><label>Newcastle</label>
+                <label>Burnley 15:00</label>
+                <li><label>Newcastle</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -144,8 +145,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Brighton 15:00</label></ul>
-                <ul><label>West Ham</label>
+                <label>Brighton 15:00</label>
+                <li><label>West Ham</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -171,8 +172,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Tottenham 15:00</label></ul>
-                <ul><label>Wolves</label>
+                <label>Tottenham 15:00</label>
+                <li><label>Wolves</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -198,8 +199,8 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Watford 15:00</label></ul>
-                <ul><label>Huddersfield</label>
+                <label>Watford 15:00</label>
+                <li><label>Huddersfield</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -225,9 +226,9 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                 </select>
-                <label>Liverpool 17:30</label></ul>
-                <h4>Sunday 20 October</h4>
-                <ul><label>Everton</label>
+                <label>Liverpool 17:30</label>
+                <h5>Sunday 20 October</h5>
+                <li><label>Everton</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -253,9 +254,9 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                     </select>
-                    <label>C Palace 16:00</ul>
-                    <h4>Monday 21 October</h4>
-                <ul><label>Arsenal</label>
+                    <label>C Palace 16:00</label>
+                    <h5>Monday 21 October</h5>
+                    <li><label>Arsenal</label>
                 <select id = "myList">
                     <option value = "0">0</option>
                     <option value = "1">1</option>
@@ -281,11 +282,126 @@
                     <option value = "8">8</option>
                     <option value = "9">9</option>
                     </select>
-                <label>Leicester 20:00</ul>
-                </ul>
-                <a class="btn btn-primary btn-sm" href="buy.html">Submit</a></p>
+                    <label>Leicester 20:00</label>
+                    </li>
+                <a class="btn btn-primary btn-sm" href="{{ url_for('pay') }}">Submit</a></p>
+            </div>
             </div>
         </fieldset>
     </form>
+        <div class="row2">  
+          <div class="ptable">
+            <h5 class="headin">League Table</h5>
+              <table>
+                <tr class="col">
+                  <th>Pos.</th>
+                  <th>Team</th>
+                  <th>Played</th>
+                  <th>Pts</th>
+                </tr>
+                <tr class="wpos">
+                  <td>1</td>
+                  <td>Man City</td>
+                  <td>8</td>
+                  <td>20</td>
+                </tr>
+                  <td>2</td>
+                  <td>Chelsea</td>
+                  <td>8</td>
+                  <td>20</td>
+                </tr>
+                  <td>3</td>
+                  <td>Liverpool</td>
+                  <td>8</td>
+                  <td>20</td>
+                </tr>
+                  <td>4</td>
+                  <td>Arsenal</td>
+                  <td>8</td>
+                  <td>18</td>
+                </tr>
+                  <td>5</td>
+                  <td>Tottenham</td>
+                  <td>8</td>
+                  <td>18</td>
+                </tr>
+                  <td>6</td>
+                  <td>Bournemouth</td>
+                  <td>8</td>
+                  <td>16</td>
+                </tr>
+                  <td>7</td>
+                  <td>Wolves</td>
+                  <td>8</td>
+                  <td>15</td>
+                </tr>
+                  <td>8</td>
+                  <td>Man United</td>
+                  <td>8</td>
+                  <td>13</td>
+                </tr>
+                  <td>9</td>
+                  <td>Watford</td>
+                  <td>8</td>
+                  <td>13</td>
+                </tr>
+                  <td>10</td>
+                  <td>Leicester</td>
+                  <td>8</td>
+                  <td>12</td>
+                </tr>
+                  <td>11</td>
+                  <td>Everton</td>
+                  <td>8</td>
+                  <td>12</td>
+                </tr> 
+                  <td>12</td>
+                  <td>Burnley</td>
+                  <td>8</td>
+                  <td>8</td>
+                </tr> 
+                  <td>13</td>
+                  <td>Brighton</td>
+                  <td>8</td>
+                  <td>8</td>
+                </tr> 
+                  <td>14</td>
+                  <td>Crystal Palace</td>
+                  <td>8</td>
+                  <td>7</td>
+                </tr> 
+                  <td>15</td>
+                  <td>West Ham</td>
+                  <td>8</td>
+                  <td>7</td>
+                </tr> 
+                  <td>16</td>
+                  <td>Southampton</td>
+                  <td>8</td>
+                  <td>5</td>
+                </tr> 
+                  <td>17</td>
+                  <td>Fulham</td>
+                  <td>8</td>
+                  <td>5</td>
+                </tr> 
+                  <td>18</td>
+                  <td>Huddersfield</td>
+                  <td>8</td>
+                  <td>3</td>
+                </tr> 
+                  <td>19</td>
+                  <td>Newcastle</td>
+                  <td>8</td>
+                  <td>2</td>
+                </tr> 
+                  <td>20</td>
+                  <td>Cardiff</td>
+                  <td>8</td>
+                  <td>2</td>
+                </tr> 
+              </table>
+            </div>
+        </div>
 </body>
 {% endblock %}        

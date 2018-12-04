@@ -28,7 +28,6 @@ def checkout(request):
                 )
                 
                 form.save()
-                #redirect('/checkout_success')
             except stripe.error.CardError:
                 form.add_error("Your card was declined!")
                 

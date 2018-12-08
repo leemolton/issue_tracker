@@ -1,9 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.context_processors import csrf
-from .forms import MakePaymentForm, OrderForm
-from .models import OrderLineItem
+from .forms import OrderForm
 from django.conf import settings
 from django.utils import timezone
 import datetime
@@ -18,10 +17,10 @@ def checkout(request):
     if request.method=="POST":
         form = OrderForm(request.POST)
         
-        if order_form.is_valid():
+        if form.is_valid():
             try:
                 customer = stripe.Charge.create(
-                    amount = 1,
+                    amount = int(total * 100),
                     currency = "GBP",
                     description = request.user.email,
                     card = form.cleaned_data['stripe_id'],
@@ -29,7 +28,7 @@ def checkout(request):
                 
                 form.save()
             except stripe.error.CardError:
-                form.add_error("Your card was declined!")
+                messages.error(request, "Your card was declined!")
                 
             if customer.paid:
                 messages.error(request, "You have successfully paid!")

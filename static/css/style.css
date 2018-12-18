@@ -1,7 +1,7 @@
 body {
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 40px;
+	padding-top: 50px;
 	background-color: #007bff;
 }
 
@@ -9,8 +9,21 @@ body {
     height: 10%;
 }
 
+.background-graphic {
+    background-color: blue;
+} 
+
+.nav-navbar-nav {
+    background-color: blue;
+}
+
+.nav navbar-fixed-top navbar-default {
+	height: 20%;
+}
+
 .p {
     color: #fff;
+    font-size: 12px;
 }
 
 .label {
@@ -25,6 +38,10 @@ body {
     height: 100px;
 }
 
+.container3 {
+    color: white;
+}
+
 .row {
 	height: 100%;
 	text-align: left;
@@ -33,13 +50,27 @@ body {
 	margin-right: auto;
 }
 
+.row1 {
+	width: 60%;
+	float: left;
+}
+
+.row2 {
+	width: 40%;
+	float: right;
+}
+
+.h1 {
+	padding-top: 10px;
+}
+
 .box_title {
-	width: 550px;
-	height: 600px;
+	width: 400px;
+	height: 850px;
 	text-align: center;
 	border-style: double;
 	border-radius: 15%;
-	display: inline-block;
+	display: block;
 	font-size: medium;
 	border-color: white;
 	margin-left: auto;
@@ -48,15 +79,54 @@ body {
 
 .box_title2 {
 	width: 550px;
-	height: 800px;
+	height: 575px;
 	text-align: center;
 	border-style: double;
-	border-radius: 15%;
+	border-radius: 5%;
 	display: inline-block;
 	font-size: medium;
 	border-color: white;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.box_title3 {
+	width: 300px;
+	height: 500px;
+	text-align: center;
+	border-radius: 15%;
+	display: block;
+	font-size: medium;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ptable {
+	display: inline-block;
+	font-size: 16px;
+	padding-top: 10px;
+	color: black;
+}
+
+.photo_title {
+	width: 50%;
+	height: 350px;
+	display: inline-block;
+	flex-flow: row;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.henry-image {
+	flex-flow: row;
+	width: 300px;
+	height: 200px;
+}
+
+.headline-image {
+	flex-flow: row;
+	width: 200px;
+	height: 200px;
 }
 
 #label.field {
@@ -67,7 +137,14 @@ body {
     float: left;
 }
 
-.footer{
-    position:absolute;
-    bottom:0;
+.footer {
+	background-color: #eee;
+	float: left;
+	text-align: left;
+	height: 10px;
 }
+
+.form-group {
+	width: 40%;
+}
+

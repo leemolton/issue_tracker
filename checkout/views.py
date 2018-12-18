@@ -15,6 +15,9 @@ stripe.api_key = settings.STRIPE_SECRET
 
 def checkout(request):
     if request.method=="POST":
+        print(request.POST)
+        print(request.POST.get('e-mail'))
+        print(request.POST.get('full_name'))
         form = OrderForm(request.POST)
         
         if form.is_valid():
@@ -32,6 +35,8 @@ def checkout(request):
                 
             if customer.paid:
                 messages.error(request, "You have successfully paid!")
+            
+            print(messages)
                 
     else:
         form = OrderForm()
@@ -45,5 +50,13 @@ def checkout(request):
     args['soon'] = datetime.date.today() + datetime.timedelta(days=30)
     
     return render(request, "checkout.html", args)
+    
+    
+def pay(request):
+    return render_to_response('checkout.html')
+    
+
+def predict(request):
+    return render_to_response('predict.html')
     
     

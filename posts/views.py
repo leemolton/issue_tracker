@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response, get_object_or_404, redirect
 from django.conf import settings
+from django.contrib import messages
 from django.utils import timezone
 from .models import Post, Entry
 from .forms import BlogPostForm, EntryForm
@@ -51,10 +52,16 @@ def new_post(request):
     
     try:
         if form.is_valid():
+            title = request.POST.get('title', '')
+            content = request.POST.get('content', '')
+            image = request.POST.get('image', '')
+            tag = request.POST.get('tag', '')
+            published_date = request.POST.get('published_date', '')
             form.save()
+            print(messages.success)
             messages.success(request, 'Blog post was saved to the database')
     except Exception as e:
-        messages.warning(request, 'Blog post was not saved. Error: {}'. format)
+        messages.warning(request, 'Blog post was not saved. Error: {}'. format(e))
         
     else:
         form = BlogPostForm()
@@ -64,6 +71,21 @@ def new_post(request):
     }
     return render(request, template, context)
     
+    
+def edit_post(request, pk=None):
+    """
+    Create a view that allows us to edit a post
+    object depending if the post ID is null or not 
+    """
+    post = get_object_or_404(Post, pk-pk) if pk else None
+    if request.method == "POST":
+        form = BlogPostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save()
+            return redirect(post_detail, post.pk)
+    else:
+        form = BlogPostForm(instance=post)
+    return render(request, 'blogpostform.html', {'form' : form})
     
     
     

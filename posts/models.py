@@ -15,7 +15,9 @@ class Post(models.Model):
     
 
 class Entry(models.Model):
-    comment = models.TextField()
+    comment = models.CharField(max_length=500)
+    user = models.CharField(max_length=200)
+    body = models.TextField(max_length=500, null=True, default=None)
     date_posted = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

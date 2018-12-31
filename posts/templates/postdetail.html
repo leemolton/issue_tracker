@@ -26,10 +26,10 @@
                         <a type="button" class="btn btn-link" href="{% url 'add' %}">Get involved with your Comments</a>
                         
                         <div class="main-comment-section">
-                          {% for entry in comment.all %}
-                            <p>{{ entry.date_posted }}</p>
-                            <p>{{ entry.user }}</p>
-                            <p>{{ entry.body }}</p>
+                          {% for entry in post.comment.all %}
+                            <p>{{ entry.post.date_posted }}</p>
+                            <p>{{ entry.post.user }}</p>
+                            <p>{{ entry.post.body }}</p>
                         {% empty %}
                             <p>There is no comments!</p>
                           </div>

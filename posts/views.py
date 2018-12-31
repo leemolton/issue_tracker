@@ -43,7 +43,8 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    return render(request, "postdetail.html", {'post': post})
+    entry=Entry.objects.filter(comment=pk)
+    return render(request, "postdetail.html", {'post': post},{'entry': entry})
 
 
 def new_post(request):
@@ -66,9 +67,7 @@ def new_post(request):
     else:
         form = BlogPostForm()
         
-    context = {
-        'form': form,
-    }
+    context = {'form': form,}
     return render(request, template, context)
     
     

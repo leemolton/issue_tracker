@@ -4,7 +4,7 @@
 <body>
 
 <div class="container">
-    <form method="POST" action="{% url 'add' %}">
+    <form method="POST" action="{% url 'add_comment' pk=object.pk %}">
         {% csrf_token %}
         <h2 class-"form-commentadd-heading">Add your Comments</h2>
         <div class="form-group">

@@ -6,17 +6,19 @@ from .models import Post, Entry
 from .forms import BlogPostForm, EntryForm
 
 # Create your views here.
-def add(request):
+def add_comment(request, pk):
+    entry = get_object_or_404(Entry, pk=pk)
     if request.method == 'POST':
         form = EntryForm(request.POST)
-        
         if form.is_valid():
-            form.save()
-            return redirect('home')
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return redirect('blogposts.html')
     else:
         form = EntryForm()
     
-    context= {'form' : form}
+    context= {'form': form, 'entry': entry}
     
     return render(request, 'add.html', context)
     
@@ -43,8 +45,8 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
-    entry=Entry.objects.filter(comment=pk)
-    return render(request, "postdetail.html", {'post': post},{'entry': entry})
+    
+    return render(request, "postdetail.html", {'post': post})
 
 
 def new_post(request):
@@ -76,7 +78,7 @@ def edit_post(request, pk=None):
     Create a view that allows us to edit a post
     object depending if the post ID is null or not 
     """
-    post = get_object_or_404(Post, pk-pk) if pk else None
+    post = get_object_or_404(Post, pk=pk) if pk else None
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():

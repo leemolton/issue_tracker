@@ -1,5 +1,85 @@
-# Django Blog Football-Project
+# Django Blog Football-Project   - <Test build to make it pass>
 
-A simple blog app written using Django.
+Explanation summary of project
 
-[![Build Status](https://travis-ci.org/leemolton/footy_fanspage.svg?branch=master)](https://travis-ci.org/leemolton/footy_fanspage)
+
+Heroku app link: <Provide link here>
+
+
+Github repository link:<Provide link here>
+
+Table of Contents
+
+
+
+
+UX
+
+Strategy
+
+<li></li>
+
+
+
+Existing Features
+
+Header and Footer
+
+Index
+
+Dates for your Diary
+
+Predictions 
+
+
+Checkout
+
+
+Post
+
+
+Comments
+
+
+Wireframes    <Draw forms and ideas for each page on website and then take photos>
+
+
+Technologies, Libraries and Languages
+
+Python
+
+
+Django
+
+Bootstrap
+
+
+HTML 5
+
+CSS 3
+
+Stripe
+
+Testing
+
+(Testing pages) <Create test pages>
+
+
+Manual Testing
+
+
+
+Heroku Deployment
+
+
+Credits
+
+Media
+
+
+Resources that helped 
+
+
+Acknowledgements
+<li>The slack forum</li>
+<li>My mentor     </li>

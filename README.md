@@ -1,85 +1,92 @@
 # Django Blog Football-Project   - <Test build to make it pass>
 
-Explanation summary of project
+# Explanation summary of project
 
 
-Heroku app link: <Provide link here>
+Heroku app link: <Provide link here> <Make Heroku link work first>
 
 
 Github repository link:<Provide link here>
 
-Table of Contents
+# Table of Contents
+- [UX]
+    - [Strategy]
+    - [Existing Features]
+        - [Header and Footer]
+        - [Index]
+        - [Dates for your Diary]
+        - [Predictions]
+        - [Checkout]
+        - [Post]
+        - [Comments]
+    - [Wireframes]    <Draw forms and ideas for each page on website and then take photos>
+- [Technologies, Libraries and Languages]
+    - [Python]
+    - [Django]
+    - [Bootstrap]
+    - [HTML 5]
+    - [CSS 3]
+    - [Stripe]
+- [Testing]
+    (Testing pages) <Create test pages>
+    - [Manual Testing]
+- [Heroku Deployment]
+- [Credits]
+    - [Media]
+    - [Resources that helped]
+    - [Acknowledgements]
+<li>The slack forum</li>
+<li>My mentor     </li>
 
 
+## UX
 
+### Strategy
 
-UX
+## Existing Features
 
-Strategy
+### Header and Footer
 
-<li></li>
+### Index
 
+### Dates for your Diary
 
+### Predictions
 
-Existing Features
+### Checkout
+        
+### Post
+        
+#### Comments
+        
+### Wireframes    <Draw forms and ideas for each page on website and then take photos>
 
-Header and Footer
+### Technologies, Libraries and Languages
+## Python
 
-Index
+- ## Django
 
-Dates for your Diary
+- ## Bootstrap
+ 
+- ## HTML 5
 
-Predictions 
+- ## CSS 3
+ 
+- ## Stripe
 
+### Testing
+    (Testing pages) <Create test pages>
+    
+### Manual Testing
 
-Checkout
+## Heroku Deployment
 
+## Credits
 
-Post
+#### Media
+    
+#### Resources that helped
 
-
-Comments
-
-
-Wireframes    <Draw forms and ideas for each page on website and then take photos>
-
-
-Technologies, Libraries and Languages
-
-Python
-
-
-Django
-
-Bootstrap
-
-
-HTML 5
-
-CSS 3
-
-Stripe
-
-Testing
-
-(Testing pages) <Create test pages>
-
-
-Manual Testing
-
-
-
-Heroku Deployment
-
-
-Credits
-
-Media
-
-
-Resources that helped 
-
-
-Acknowledgements
+#### Acknowledgements
 <li>The slack forum</li>
 <li>My mentor     </li>

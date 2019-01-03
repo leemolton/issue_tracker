@@ -5,19 +5,16 @@
     </div>
     {% for post in posts %} 
         <div class="row">
-            <div class="col-md-2 col-sm-3 text-center">
-                <p>Author: Lee</p>
-            </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.title }}</h3>
                 <div class="row">
                     <div class="col-xs-9">
                         <tr>{{ post.content|truncatewords:30 }}</tr>
                         <a href="{% url 'post_detail' post.id %}" class="btn btn-default">Read more</a>
+                        <li>Author: Lee</li>
                         <li>Published on:</span> {{ post.published_date }}</li>
                         <li>Views: {{ post.views }}</li>
                         <li>Tag: {{ post.tag }}</li>
-                        <li>Total No of Comments: {{ post.comment.count }}</li>
                     </div>
                 </div>
             </div>

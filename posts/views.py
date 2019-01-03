@@ -7,20 +7,21 @@ from .forms import BlogPostForm, EntryForm
 
 # Create your views here.
 def add_comment(request, pk):
-    entry = get_object_or_404(Entry, pk=pk)
+    post_reference = get_object_or_404(Entry, pk=pk)
+    entry = Entry()
+    
     if request.method == 'POST':
-        form = EntryForm(request.POST)
+        form = EntryForm(request.POST, request.FILES)
+        
         if form.is_valid():
             comment = form.save(commit=False)
-            comment.post = post
+            comment.comment = post_reference
             comment.save()
-            return redirect('blogposts.html')
+            return redirect(post_detail, pk)
     else:
         form = EntryForm()
-    
-    context= {'form': form, 'entry': entry}
-    
-    return render(request, 'add.html', context)
+
+    return render(request, 'add.html', {'form': form, 'entry': entry})
     
 
 def get_posts(request):
@@ -45,8 +46,9 @@ def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()
+    entry = Entry.objects.filter(comment=pk)
     
-    return render(request, "postdetail.html", {'post': post})
+    return render(request, "postdetail.html", {'post': post, 'entry': entry})
 
 
 def new_post(request):

@@ -4,15 +4,15 @@
 <body>
 
 <div class="container">
-    <form method="POST" action="{% url 'add_comment' pk=object.pk %}">
+    <form method="POST">
         {% csrf_token %}
         <h2 class-"form-commentadd-heading">Add your Comments</h2>
         <div class="form-group">
             <label for="inputName" class="sr-only">Name</label>
-            <input type="text" id="inputName" name="name" class="form-control" placeholder="Name" required autofocus>
+            <input type="text" id="id_user" name="user" class="form-control" placeholder="Name" required autofocus>
         </div>
             <div class="comment-group">
-                <textarea name="comment" id="comment"></textarea>
+                <textarea name="id_body" id="id_body"></textarea>
                 
             </div>
         <button class="btn btn-sm btn-primary btn-info" type="submit">Submit</button>

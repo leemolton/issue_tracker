@@ -12,6 +12,3 @@ class BlogPostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'content', 'image', 'tag', 'published_date',)
         
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['comment'].widget.attrs.update({'class': 'textarea', 'placeholder': 'Add your comment.'})

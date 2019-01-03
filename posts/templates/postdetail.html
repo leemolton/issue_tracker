@@ -25,7 +25,7 @@
                         
                         <div class="main-comment-section">
                           {% for item in entry %}
-                            <br>{{ item.date_posted }}
+                            <br><i>{{ item.date_posted }}</i>
                             <br><strong>{{ item.user }}</strong>
                             <br><strong>{{ item.body }}</strong></br>
                         {% empty %}

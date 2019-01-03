@@ -7,7 +7,7 @@ from .forms import BlogPostForm, EntryForm
 
 # Create your views here.
 def add_comment(request, pk):
-    post_reference = get_object_or_404(Entry, pk=pk)
+    post_reference = get_object_or_404(Post, pk=pk)
     entry = Entry()
     
     if request.method == 'POST':

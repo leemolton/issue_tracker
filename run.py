@@ -12,13 +12,17 @@ def index():
     return render_template("index.html")
     
 
-@app.route('/add', methods=["GET", "POST"])
-def add():
-    if request.method == "POST":
-       flash("Thanks {}, you have added to the forum!".format(
-            request.form["name"]))
-    return render_template("add.html", page_title="Add to forum")
+@app.route('/add_comment')
+def add_comment():
+    return render_template("add.html", page_title="Send a comment")
 
+
+@app.route('/process', methods=['POST'])
+def process():
+    name = request.form['name']
+    comment = request.form['comment']
+    return 'Name is: ' + name + 'and the comment is: ' + comment
+    
    
 @app.route('/view')
 def view():
@@ -34,6 +38,11 @@ def pay():
 def post():
     return render_template("blog.html", page_title="Post")
     
+
+@app.route('/add')
+def add():
+    return render_template("add.html", page_title="Comments")
+    
     
 @app.route('/predict')
 def predict():
@@ -48,11 +57,6 @@ def get_posts():
 @app.route('/new_post')
 def new_post():
     return render_template("blogpostform.html", page_title="form")
-    
-    
-@app.route('/login')
-def login():
-    return render_template("login.html", page_title="Pay for Predictions")
     
 
 @app.route('/henry')

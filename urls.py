@@ -11,7 +11,7 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     path(r'^admin/', admin.site.urls),
     path(r'^$', v.index),
-    #path(r'^checkout/', include(urls_checkout)),
+    path(r'^/checkout/', include(urls_checkout)),
     path(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     
 ]

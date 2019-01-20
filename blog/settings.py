@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'blog',
     'checkout',
     'posts',
+    'env',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +143,7 @@ APPEND_SLASH = False
 STATIC_URL = '/static/'
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+STATIC_ROOT = (os.path.join(PROJECT_ROOT, 'static'), )
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

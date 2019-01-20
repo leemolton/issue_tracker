@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.template.context_processors import csrf
@@ -18,6 +18,7 @@ def checkout(request):
         print(request.POST)
         print(request.POST.get('e-mail'))
         print(request.POST.get('full_name'))
+        print(request.POST.get('amount'))
         form = OrderForm(request.POST)
         
         if form.is_valid():
@@ -25,7 +26,7 @@ def checkout(request):
                 customer = stripe.Charge.create(
                     amount = int(total * 100),
                     currency = "GBP",
-                    description = request.user.email,
+                    description = request.user.e-mail,
                     card = form.cleaned_data['stripe_id'],
                 )
                 
@@ -58,5 +59,8 @@ def pay(request):
 
 def predict(request):
     return render_to_response('predict.html')
+    
+
+
     
     

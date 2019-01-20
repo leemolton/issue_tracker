@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<form id='user_form' method='post' action="/checkout/">{% csrf_token %}
+<form id='user_form' method='post' action="/checkout/checkout/">{% csrf_token %}
 <noscript>
     &lt:p&gt;
         This form requires Javascript to work!
@@ -25,38 +25,41 @@
     
 <!-- Form Name -->
 <div class="container">
-        <div class="row1">
-        <h1>Checkout</h1>
-            <div id="box" class="box_title3">
+   <div class="row1">
+      <h1>Checkout</h1>
+         <div id="box" class="box_title3">
 
 <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="full_name">Full Name</label> 
-                      <div class="controls">
-                          <input id="full_name" name="full_name" type="text" placeholder="Full Name"
-                            class="input-x-large">
-                      </div>
-                </div>
+            <div class="control-group">
+               <label class="control-label" for="full_name">Full Name</label> 
+                  <div class="controls">
+                     <input id="full_name" name="full_name" type="text" placeholder="Full Name"
+                     class="input-x-large">
+                  </div>
+            </div>
 
-                <div class="control-group">
-                     <label class="control-label" for="e-mail">E-mail</label> 
-                          <div class="controls">
-                              <input id="e-mail" name="e-mail" type="text" placeholder="E-mail" class="input-x-large">
-                          </div>
-                </div>
+            <div class="control-group">
+               <label class="control-label" for="e-mail">E-mail</label> 
+                  <div class="controls">
+                     <input id="e-mail" name="e-mail" type="text" placeholder="E-mail" class="input-x-large">
+                  </div>
+            </div>
 
 {{form.stripe_id.as_hidden}}
 
 {% include 'stripe_form.html' %}
 
-                <div class="control-group">
-                     <label class="control-label" for="amount">£1.00</label> 
-                </div>
+            <div class="control-group">
+               <label class="control-label" for="amount">Amount</label>
+                  <div class="controls">
+                     <input id="amount" name="amount" type="int" placeholder="amount" class="input-x-large">
+                  </div>
+            </div>
                 
-                <br/>
-                    <div class="actions">
-                        <input class="btn btn-primary" id="user_submit" name="commit" type="submit" value="Validate Credit Card">
-                    </div>
+               <br/>
+               <div class="actions">
+                  <input class="btn btn-primary" id="user_submit" name="commit" type="submit" value="Validate Credit Card">
+               </div>
             </div>
         </div>
 </div>

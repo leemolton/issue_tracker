@@ -1,5 +1,9 @@
 Django==1.11.16
+Flask==1.0.2
+Jinja2==2.10.1
+MarkupSafe==1.1.1
 SecretStorage==2.0.0
+Werkzeug==0.15.2
 argparse==1.2.1
 arrow==0.12.1
 beautifulsoup4==4.6.3
@@ -40,3 +44,4 @@ urllib3==1.7.1
 virtualenv==16.0.0
 virtualenv-clone==0.3.0
 virtualenvwrapper==4.8.2
+

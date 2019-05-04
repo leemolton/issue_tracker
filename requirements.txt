@@ -4,7 +4,6 @@ argparse==1.2.1
 arrow==0.12.1
 beautifulsoup4==4.6.3
 boto==2.49.0
-bzr==2.7.0.dev1
 chardet==2.0.1
 colorama==0.2.5
 configobj==4.7.2

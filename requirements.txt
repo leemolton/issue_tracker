@@ -26,7 +26,6 @@ launchpadlib==1.10.6
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
 lockfile==0.8
-mercurial==2.8.2
 microurl==0.1.1
 oauth==1.0.1
 oauthlib==3.0.1

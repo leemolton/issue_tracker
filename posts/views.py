@@ -6,6 +6,17 @@ from .models import Post, Entry
 from .forms import BlogPostForm, EntryForm
 
 # Create your views here.
+def get_posts(request):
+    """
+    Create a view that will return a
+    list of Posts that were published prior to'now'
+    and render them to the 'blogposts.html' template
+    """
+    posts = Post.objects.filter(published_date__lte=timezone.now
+        ()).order_by('-published_date')
+    return render(request, "blogposts.html", {'posts': posts})
+
+
 def add_comment(request, pk):
     post_reference = get_object_or_404(Post, pk=pk)
     entry = Entry()
@@ -23,17 +34,6 @@ def add_comment(request, pk):
 
     return render(request, 'add.html', {'form': form, 'entry': entry})
     
-
-def get_posts(request):
-    """
-    Create a view that will return a
-    list of Posts that were published prior to'now'
-    and render them to the 'blogposts.html' template
-    """
-    posts = Post.objects.filter(published_date__lte=timezone.now
-    ()).order_by('-published_date')
-    return render(request, "blogposts.html", {'posts': posts})
-
 
 def post_detail(request, pk):
     """

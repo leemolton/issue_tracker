@@ -1,6 +1,5 @@
 from django.conf.urls import url, include
 from django.conf import settings
-from django.urls import path
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import RedirectView
@@ -13,12 +12,14 @@ from checkout.views import predict
 
 urlpatterns = [
     url(r'admin/', admin.site.urls),
-    path(r'', home, name="home"),
-    path(r'view/', view, name="diary"),
+    url(r'', home, name="home"),
+    url(r'view/', view, name="diary"),
+    url(r'henry/', view, name="henry"),
+    url(r'jose/', view, name="jose"),
     url(r'^checkout/predict/$', checkout_views.predict),
     url(r'checkout/', include('checkout.urls')),
-    #path(r'^$', RedirectView.as_view(url='post/')),
-    path(r'posts/', include('posts.urls')),
+    url(r'^$', RedirectView.as_view(url='posts/')),
+    url(r'posts/', include('posts.urls')),
     #path(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     ]
 

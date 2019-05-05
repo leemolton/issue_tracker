@@ -20,5 +20,15 @@ def view(request):
     return render(request, template)
     
     
+def henry(request):
+    template = 'henry.html'
+    return render(request, template)
+    
+
+def jose(request):
+    template = 'jose.html'
+    return render(request, template)
+    
+    
 def predict(request):
     return render_to_response('predict.html')

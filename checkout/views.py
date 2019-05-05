@@ -6,12 +6,12 @@ from .forms import OrderForm
 from django.conf import settings
 from django.utils import timezone
 import datetime
-import stripe
+#import stripe
 
 
 # Create your views here.
 
-stripe.api_key = settings.STRIPE_SECRET
+#stripe.api_key = settings.STRIPE_SECRET
 
 def checkout(request):
     if request.method=="POST":

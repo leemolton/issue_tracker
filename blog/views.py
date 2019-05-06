@@ -16,7 +16,7 @@ def home(request):
     
 
 def diary(request):
-    return render(request, "datesdiary.html")
+    return render(request, 'datesdiary.html')
 
     
 def henry(request):
@@ -30,4 +30,4 @@ def jose(request):
     
     
 def predict(request):
-    return render_template('predict.html')
+    return render(request,'predict.html')

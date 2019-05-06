@@ -58,7 +58,7 @@ def pay(request):
     
 
 def predict(request):
-    return render_to_response('predict.html')
+    return render_template('predict.html')
     
 
 

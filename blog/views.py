@@ -15,10 +15,9 @@ def home(request):
     return render(request, template)
     
 
-def view(request):
-    template = 'datesdiary.html'
-    return render(request, template)
-    
+def diary(request):
+    return render(request, "datesdiary.html")
+
     
 def henry(request):
     template = 'henry.html'
@@ -31,4 +30,4 @@ def jose(request):
     
     
 def predict(request):
-    return render_to_response('predict.html')
+    return render_template('predict.html')

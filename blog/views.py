@@ -1,6 +1,7 @@
-from django.shortcuts import render, render_to_response, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect
 from django.conf import settings
 from django.utils import timezone
+from django.http import HttpResponse
 
 
 def index(request):
@@ -16,7 +17,7 @@ def home(request):
     
 
 def diary(request):
-    return render(request, 'datesdiary.html')
+    return render(request, 'blog/datesdiary.html')
 
     
 def henry(request):
@@ -30,4 +31,5 @@ def jose(request):
     
     
 def predict(request):
-    return render(request,'predict.html')
+    template = 'predict.html'
+    return render(request, template)

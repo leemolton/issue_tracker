@@ -12,11 +12,10 @@ from checkout import views as checkout_views
 from checkout.views import predict
 
 urlpatterns = [
-    #url(r'admin/', admin.site.urls),
-    url(r'', views.home, name="home"),
+    url(r'^$', views.home, name="home"),
     url(r'^diary/$', views.diary, name="diary"),
-    #url(r'^henry/$', henry, name="henry"),
-    #url(r'^jose/$', jose, name="jose"),
+    url(r'^henry/$', henry, name="henry"),
+    url(r'^jose/$', jose, name="jose"),
     url(r'^predict/', checkout_views.predict),
     url(r'checkout/', include('checkout.urls')),
     url(r'^$', RedirectView.as_view(url='posts/')),

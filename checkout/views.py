@@ -54,11 +54,11 @@ def checkout(request):
     
     
 def pay(request):
-    return render_to_response('checkout.html')
+    return render(request, 'checkout.html')
     
 
 def predict(request):
-    return render_template('predict.html')
+    return render(request, 'predict.html')
     
 
 

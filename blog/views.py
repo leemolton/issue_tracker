@@ -17,19 +17,16 @@ def home(request):
     
 
 def diary(request):
-    return render(request, 'blog/datesdiary.html')
+    return render(request, 'datesdiary.html')
 
     
 def henry(request):
-    template = 'henry.html'
-    return render(request, template)
+    return render(request, 'henry.html')
     
 
 def jose(request):
-    template = 'jose.html'
-    return render(request, template)
+    return render(request, 'jose.html')
     
     
 def predict(request):
-    template = 'predict.html'
-    return render(request, template)
+    return render(request, 'predict.html')

@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^predict/', checkout_views.predict),
     url(r'checkout/', include('checkout.urls')),
     url(r'^$', RedirectView.as_view(url='posts/')),
-    url(r'posts/', include('posts.urls')),
+    url(r'^posts/', include('posts.urls')),
 ]
 
 

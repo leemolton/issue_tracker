@@ -1,5 +1,4 @@
 from django.conf.urls import url
-#from django.urls import path
 from .views import get_posts, add_comment, post_detail,  new_post, edit_post
 
 

@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^jose/$', jose, name="jose"),
     url(r'^predict/', checkout_views.predict),
     url(r'checkout/', include('checkout.urls')),
-    url(r'^posts/$', include('posts.urls')),
+    url(r'^posts/', include('posts.urls')),
 ]
 
 

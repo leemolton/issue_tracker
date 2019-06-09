@@ -7,7 +7,7 @@ There is a Diary page where forthcoming big games are highlighted so fans know w
 
 
 - Heroku app link
-    - https://dashboard.heroku.com/apps/footy-blog
+    - https://footy-blog.herokuapp.com/
 
 - Github repository link</li>
     - https://github.com/leemolton/footy_fanspage

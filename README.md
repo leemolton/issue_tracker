@@ -7,10 +7,10 @@ There is a Diary page where forthcoming big games are highlighted so fans know w
 
 
 - Heroku app link
-    - <Make Heroku link work first>
+    - https://dashboard.heroku.com/apps/footy-blog
 
 - Github repository link</li>
-    - https://github.com/leemolton/footy_fanspage</li>
+    - https://github.com/leemolton/footy_fanspage
 
 # Table of Contents
 - [UX](https://github.com/leemolton/footy_fanspage/master/README.md#ux)
@@ -177,7 +177,8 @@ the post.
 python3 manage.py runserver $IP:$C9_PORT
     
 #### Resources that helped
-Searching daily, weekly and monthly on the Stack Overflow website(https://stackoverflow.com)
+Searching daily, weekly and monthly on the Stack Overflow website
+(https://stackoverflow.com)
 
 #### Acknowledgements
 The slack forum
